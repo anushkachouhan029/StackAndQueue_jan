@@ -21,4 +21,14 @@ namespace StackAndQueue
         {
             linkedlist.StackDisplay();
         }
+        public void Peek()
+        {
+            var value = linkedlist.Head;
+            Console.WriteLine(value.data);
+        }
+        public void Pop()
+        {
+            linkedlist.DeleteNodeAtFirst();
+        }
     }
+}

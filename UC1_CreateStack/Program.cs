@@ -1,34 +1,41 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 namespace StackAndQueue
 {
-    public class Stack
+
+    class Program
     {
-        LinkedList linkedlist;
-        public Stack()
+        static void Main(string[] args)
         {
-            linkedlist = new LinkedList();
-        }
-        public void Push(Node node)
-        {
-            linkedlist.AddNode(node);
-        }
-        public void DisplayStack()
-        {
-            linkedlist.StackDisplay();
-        }
-        public void Peek()
-        {
-            var value = linkedlist.Head;
-            Console.WriteLine(value.data);
-        }
-        public void Pop()
-        {
-            linkedlist.DeleteNodeAtFirst();
+            Console.WriteLine("Welcome to the Stack and Queue program \n---------------------------------------");
+            //Stack stack = new Stack();
+            //Node node1 = new Node(70);
+            //Node node2 = new Node(30);
+            //Node node3 = new Node(56);
+
+            //stack.Push(node1);
+            //stack.Push(node2);
+            //stack.Push(node3);
+            //stack.DisplayStack();
+            //Console.WriteLine("Removing the topmost element by peeking : ");
+            //stack.Peek();
+            //Console.WriteLine("Removing the topmost element by popping : ");
+            //stack.Pop();
+            Queue queue = new Queue();
+            Node node1 = new Node(56);
+            Node node2 = new Node(30);
+            Node node3 = new Node(70);
+
+            queue.Enqueuue(node1);
+            queue.Enqueuue(node2);
+            queue.Enqueuue(node3);
+            queue.DisplayQueue();
+            Console.WriteLine("Removing the topmost element from Queue ");
+            queue.Top();
+
+            Console.WriteLine("After Remoing the last element from Queue ");
+            queue.Dequeue();
+            queue.DisplayQueue();
+
         }
     }
 }
